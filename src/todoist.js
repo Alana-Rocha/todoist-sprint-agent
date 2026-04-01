@@ -124,6 +124,19 @@ export async function createProject(name, workspace_id) {
   return data;
 }
 
+export async function deleteFolder(folder_id) {
+  const uuid = crypto.randomUUID();
+  const { ok, data } = await syncRequest([{
+    type: "folder_delete",
+    uuid,
+    args: { id: Number(folder_id) },
+  }]);
+  if (!ok || data.sync_status?.[uuid] !== "ok") {
+    throw new Error(`Falha ao deletar pasta: ${JSON.stringify(data.sync_status?.[uuid])}`);
+  }
+  return true;
+}
+
 export async function assignProjectToFolder(project_id, folder_id) {
   const uuid = crypto.randomUUID();
   const { ok, data } = await syncRequest([{

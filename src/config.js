@@ -6,16 +6,21 @@ export const sprintFolders = {
   "03": "155026",
   "04": "155033",
   "05": "155034",
-  "06": "173130",
-  "07": "173131",
-  "08": "173135",
-  "09": "173137",
-  10: "174237",
-  11: "174240",
-  13: "174280",
+  "06": "177685",
 };
 
-export const fixedProjects = ["OnTick Code"];
+export const fixedProjects = [
+  "['Trade Ideas] Implementação de Cálculo de ETF no EMS/OMS | OnTick API e melhorias ]",
+  "CX/CS",
+  "Research",
+  "[OnTick API] Auditoria de ativação de robôs",
+  "[Admin de Estratégias] Criação do fluxo completo de criação de portfólio de estratégias",
+  "DevOps",
+  "[Distribuição] Lançamento de Parceiros, Estratégias e Portfólios",
+  "[Trade Ideas] Implementar logs da execução",
+  "OnTick Code",
+  "[Trade Ideas] Integração e exibição de Eventos Corporativos da XP",
+];
 
 export const systemPrompt = `Você é um assistente de produtividade com acesso ao Todoist do usuário. Responda sempre em português.
 
